@@ -27,10 +27,7 @@ class Api::V1::OrdersControllerTest < ActionDispatch::IntegrationTest
     json_response = JSON.parse(response.body, symbolize_names: true)
     assert_equal @order.user.orders.count, json_response['data'].count
 
-    asert_not_nil json_response.dig(:links, :first)
-    asert_not_nil json_response.dig(:links, :last)
-    asert_not_nil json_response.dig(:links, :prev)
-    asert_not_nil json_response.dig(:links, :next)
+    assert_json_response_is_paginated json_response
   end
 
   test 'should show order' do
