@@ -49,3 +49,5 @@ gem "faker", "~> 2.19"
 gem "fast_jsonapi", "~> 1.5"
 
 gem "kaminari", "~> 1.2"
+
+gem "bullet", "~> 7.0", :group => :development
