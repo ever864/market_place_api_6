@@ -1,7 +1,9 @@
 # Market Place Api
 La aplicacion construida es una market place, donde se pueden comprar y vender productos entre los usuarios registrados a la aplicación.
 
-Esta API RESTful esta compuesta por 5 modelos, los usuarios que pueden autenticarse mediante su propio email y password, para la seguridad del password se implementó JSON Web Tokens (JWT). Lo cual, un usuario pueden crear su propia lista de productos para mostrar tambien a otros usuarios y el producto a crear tiene un titulo, precio, y si será publicado o no, aplicando un boleano a esta columna. Tambien, para poder comprar se necesita un modelo llamado ordenes, donde ahi se va a guardar el precio final o total de los productos, que estaria vinculado con en modelo de los productos. Por último, tendrá un modelo llamado placement que unirá ordenes y productos, ya que son mucho a muchos entre ambos, que se guardaria ahi la cantidad por cada producto. 
+Esta API RESTful esta compuesta por 4 modelos(usuario, producto, orden y placement).
+
+Los usuarios que pueden autenticarse mediante su propio email y password, para la seguridad del password se uso bcrypt y JSON Web Tokens (JWT). Lo cual, un usuario puede crear su propia lista de productos que pueden ser mostrados a otros usuarios o no y el producto a crear tiene un titulo y precio. Tambien, para poder comprar se necesita un modelo llamado ordenes, donde ahi se va a guardar el precio final o total de los productos, que estaria vinculado con en modelo de los productos. Por último, tendrá un modelo llamado placement que unirá ordenes y productos, ya que son mucho a muchos entre ambos, que se guardaria ahi la cantidad por cada producto. 
 
 # Tecnologias
 - Ruby -v "2.7.0" 
